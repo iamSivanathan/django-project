@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+#team-players {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.club-heading{
+    width: 100%;
+    height: 13rem;
+    color: white;
+    align-content: center;
+    font-size: 1.5rem;
+    padding-top: 10px;
+    letter-spacing: 5px;
+}
+.club-heading img{
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+
+
+/* Table styling */
+.players-table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.players-table-container table{
+    width: 80%;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.players-table-container th, .players-table-container td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.players-table-container th {
+    background-color: #115f94;
+    color: white;
+    font-weight: bold;
+}
+
+.players-table-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.players-table-container tr:hover {
+    background-color: #ddd;
+    transition: 0.3s;
+}
+
+#club-footer{
+    margin-top: 2.5rem;
+    background: black;
+    width: 100%;
+    height: 15rem;
+}

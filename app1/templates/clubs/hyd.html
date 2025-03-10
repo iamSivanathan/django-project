@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyderabad FC</title>
+    <link rel="stylesheet" href="{% static 'CSS/clubs/clubplayers.css'%}">
+</head>
+<body>
+<section id="team-players">
+
+    <div class="club-heading" style="background: linear-gradient(to right, #FCD701,#202122);">
+        <img src="{% static 'image/hyd.fc.webp'%}" alt="" width="130px">
+        <h1>Hyderabad FC</h1>
+    </div>
+    
+    <div class="players-table-container">
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Matches</th>
+            <th>Goals</th>
+        </thead>
+
+        {% for x in pl%}
+        <tr>
+            <td>{{x.id}}</td>
+           <td>{{x.name}}</td>
+           <td>{{x.position}}</td>
+           <td>{{x.mathch}}</td>
+           <td>{{x.goal}}</td>
+           
+        
+        </tr>
+        {% endfor%}    
+        
+    </table>
+
+    </div>
+</section>
+<section id="club-footer">
+    <h2>clubfooter</h2>
+</section>
+</body>
+</html>

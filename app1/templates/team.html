@@ -1,0 +1,234 @@
+{% extends 'index.html'%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block content%}
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams</title>
+    <link rel="stylesheet" href="{% static 'CSS/team.css' %}">
+</head>
+<body>
+
+    <div class="heading-container">
+        <h1><i class="fa-solid fa-star" style="color: rgb(255, 196, 0);"></i>    CLUBS</h1>
+    </div>
+
+    <div class="clubs-container">
+    
+        <div class="club" style="background: linear-gradient(to right,#E8222E,#2D459C);">
+            <img src="{% static 'image/beng.fc.webp'%}" alt="" width="90px">
+            <h2>Bengaluru FC</h2>
+            <a href="{% url 'beng'%}"><button>club profile</button></a>
+        </div>
+        
+        <div class="club" style="background: linear-gradient(to right,#F9B414,#224A8F);">
+            <img src="{% static 'image/chen.fc.webp'%}" alt="" width="90px">
+            <h2>Chennaiyin FC</h2>
+            <a href="{% url 'chen'%}"><button>club profile</button></a>
+
+        </div>
+
+        <div class="club" style="background: linear-gradient(to right,#FAB601,#F22A32);">
+            <img src="{% static 'image/eastbeng.fc.webp'%}" alt="" width="90px">
+            <h2>East Bengal FC</h2>
+            <a href="{% url 'ebeng'%}"><button>club profile</button></a>
+
+
+        </div>
+
+
+        <div class="club" style="background: linear-gradient(to right,#080F59,#F86302);">
+            <img src="{% static 'image/goa.fc.webp'%}" alt="" width="90px">
+            <h2>FC Goa</h2>
+            <a href="{% url 'goa'%}"><button>club profile</button></a>
+
+        </div>
+
+        <div class="club" style="background: linear-gradient(to right,#FCD701,#202122);">
+            <img src="{% static 'image/hyd.fc.webp'%}" alt="" width="90px">
+            <h2>Hyderabad FC</h2>
+            <a href="{% url 'hyd'%}"><button>club profile</button></a>
+
+        </div>
+
+        <div class="club" style="background: linear-gradient(to right,#EB293D,#024A8E);">
+            <img src="{% static 'image/jams.fc.webp'%}" alt="" width="90px">
+            <h2>Jamshedpur FC</h2>
+            <a href="{% url 'jams'%}"><button>club profile</button></a>
+
+        </div>
+
+        <div class="club" style="background: linear-gradient(to right,#E8D82B,#2C74DF);">
+            <img src="{% static 'image/ker.fc.webp'%}" alt="" width="90px">
+            <h2>Kerala Blasters FC</h2>
+            <a href="{% url 'kerala'%}"><button>club profile</button></a>
+
+        </div>
+
+        <div class="club" style="background: linear-gradient(to right,#281F0F,#E1A330);">
+            <img src="{% static 'image/moha.fc.webp'%}" alt="" width="90px">
+            <h2>Mohammedan SC</h2>
+            <a href="{% url 'moham'%}"><button>club profile</button></a>
+
+        </div>
+
+         <div class="club" style="background: linear-gradient(to right,#065A2E,#A42D32);">
+            <img src="{% static 'image/giant.fc.webp'%}" alt="" width="90px">
+            <h2>Mohun Bagan Super Giant</h2>
+            <a href="{% url 'mohun'%}"><button>club profile</button></a>
+
+        </div>
+
+        <div class="club" style="background: linear-gradient(to right,#73BCEE,#253067);">
+            <img src="{% static 'image/mum.fc.webp'%}" alt="" width="90px">
+            <h2>Mumbai City FC</h2>
+            <a href="{% url 'mumbai'%}"><button>club profile</button></a>
+
+        </div>
+
+        <div class="club" style="background: linear-gradient(to right,#DF2326,#2D1F1F);">
+            <img src="{% static 'image/nor.fc.webp'%}" alt="" width="90px">
+            <h2>NorthEast United FC</h2>
+            <a href="{% url 'NE'%}"><button>club profile</button></a>
+
+        </div>
+
+        <div class="club" style="background: linear-gradient(to right,#F82727,#271434);">
+            <img src="{% static 'image/odis.fc.webp'%}" alt="" width="90px">
+            <h2>Odisha FC</h2>
+            <a href="{% url 'odis'%}"><button>club profile</button></a>
+
+        </div>
+
+        <div class="club" style="background: linear-gradient(to right,#F15827,#FAA519);">
+            <img src="{% static 'image/punj.fc.webp'%}" alt="" width="90px">
+            <h2>Punjab FC</h2>
+            <a href="{% url 'punj'%}"><button>club profile</button></a>
+
+        </div>
+
+        
+
+    </div>
+    
+<!-- footer -->
+<section id="footer">
+    <table class="footer-table">
+        
+        <thead class="footer-table-heading">
+            <th>GALLERIES</th>
+            <th>CLUBS</th>
+            <th>SEASON</th>
+            <th>FOLLOW US</th>
+        </thead>
+        
+        <div class="footer-table-datas">
+        <tr>
+            <td>Photos</td>
+            <td>Bengaluru FC</td>
+            <td>Matches</td>
+            <td>
+                <i><i class="fa-solid fa-envelope"></i></i>
+                <i><i class="fa-brands fa-facebook-f"></i></i>
+                <i><i class="fa-brands fa-twitter"></i></i>
+                <i><i class="fa-brands fa-youtube"></i></i>
+                <i><i class="fa-brands fa-instagram"></i></i>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Videos</td>
+            <td>Chennaiyin FC</td>
+            <td>Standings</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>East Bengal FC</td>
+            <td>Statistics</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>FC Goa</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Hyderabad FC</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Jamshedpur FC</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Kerala Blasters FC</td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Mohammedan SC</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Mohun Bagan Super Giant</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Mumbai City FC</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>NorthEast United FC</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Odisha FC</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Punjab FC</td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+    </div>
+    </table>
+</section>
+    
+</body>
+{% endblock%}
+</html>
+
+

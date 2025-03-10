@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update team</title>
+    <link rel="stylesheet" href="{% static 'CSS/standing/standupdate.css'%}">
+</head>
+<body>
+    <section id="stand-update">
+
+        <div class="stand-update-heading">
+            <h2>Update Team</h2>
+        </div>
+
+    <div class="standupdate-form-container">
+        <h3> Update Standings</h3>
+
+    <div class="standing-update-form">
+    <form action="" method="post">
+        {%csrf_token%}
+        {{sform}}
+        <button>save</button>
+    </form>
+    </div>
+
+    </div>
+    </section>
+</body>
+</html>

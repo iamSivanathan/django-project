@@ -1,0 +1,171 @@
+{% extends 'index.html'%}
+{% block content%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>standing</title>
+    <link rel="stylesheet" href="{% static 'CSS/standing.css'%}">
+</head>
+<body>
+
+    <!-- standing-table -->
+
+    <section class="standing-table">
+    
+    <div class="standing-table-heading">
+      <h1><i class="fa-solid fa-star" style="color: rgb(255, 196, 0);"></i>Standing</h1>
+      <a href="{% url 'standadd' %}"><button>Enter team</button></a>
+    </div>
+
+    <div class="stand-table">
+    <table>
+        <thead>
+            <th>#</th>
+            <th>Clubs</th>
+            <th>Played</th>
+            <th>Won</th>
+            <th>Draw</th>
+            <th>Lost</th>
+            <th>Points</th> 
+        </thead>
+
+        {% for x in ts%}
+        <tr>
+            <td style="text-align: center;">{{x.id}}</td>
+            <td style="color: black; text-align: left;">{{x.team_name}}</td>
+            <td>{{x.matches_played}}</td>
+            <td style="color: green;">{{x.wins}}</td>
+            <td style="color: rgb(255, 166, 0);">{{x.draws}}</td>
+            <td style="color: red;">{{x.loss}}</td>
+            <td>{{x.points}}</td>
+            <td>
+               <a href="{% url 'standform' x.id%}"><button>update</button></a>
+            </td>
+        </tr>
+        {% endfor%}
+    </table>
+
+    </div>
+    </section>
+
+<!-- footer -->
+<section id="footer">
+    <table class="footer-table">
+        
+        <thead class="footer-table-heading">
+            <th>GALLERIES</th>
+            <th>CLUBS</th>
+            <th>SEASON</th>
+            <th>FOLLOW US</th>
+        </thead>
+        
+        <div class="footer-table-datas">
+        <tr>
+            <td>Photos</td>
+            <td>Bengaluru FC</td>
+            <td>Matches</td>
+            <td>
+                <i><i class="fa-solid fa-envelope"></i></i>
+                <i><i class="fa-brands fa-facebook-f"></i></i>
+                <i><i class="fa-brands fa-twitter"></i></i>
+                <i><i class="fa-brands fa-youtube"></i></i>
+                <i><i class="fa-brands fa-instagram"></i></i>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Videos</td>
+            <td>Chennaiyin FC</td>
+            <td>Standings</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>East Bengal FC</td>
+            <td>Statistics</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>FC Goa</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Hyderabad FC</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Jamshedpur FC</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Kerala Blasters FC</td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Mohammedan SC</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Mohun Bagan Super Giant</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Mumbai City FC</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>NorthEast United FC</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Odisha FC</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Punjab FC</td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+    </div>
+    </table>
+</section>
+</body>
+
+
+
+</html>
+{% endblock%}

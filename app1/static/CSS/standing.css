@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.standing-table .standing-table-heading{
+    background: linear-gradient(to right,red,rgb(82, 77, 74));
+    height: 10rem;
+    display: flex;
+}
+.standing-table-heading h1{
+    position: relative;
+    top: 30%;
+    left: 10%;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 2rem;
+}
+.standing-table-heading a{
+    position: relative;
+    top: 30%;
+    left: 70%;
+    height: 1.6rem;
+}
+.standing-table-heading button{
+    background-color: #7cb837; 
+    color: white;
+    padding: 8px 9px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: larger;
+    cursor: pointer;
+}
+
+/* standing table */
+
+.stand-table {
+    border-collapse: collapse; /* Removes space between borders */
+    justify-items: center;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+
+.stand-table table{
+    width: 85%;
+    background: rgba(253, 253, 253, 0.932);
+    border-radius: 10px;
+}
+.stand-table td {
+    border-bottom: 1px solid #ddd; 
+    padding: 8px 15px; 
+    text-align: right; 
+    color: rgb(10, 10, 129);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+  
+.stand-table th {
+    background-color: #4CAF50; 
+    color: white; 
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.stand-table button{
+    background: rgb(8, 102, 131);
+    padding: 8px 10px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    text-align: justify;  
+    display: inline;  
+    cursor: pointer;
+}
+
+
+
