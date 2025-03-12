@@ -24,6 +24,7 @@
     <table>
         <thead>
             <th>#</th>
+            <th>Logo</th>
             <th>Clubs</th>
             <th>Played</th>
             <th>Won</th>
@@ -35,6 +36,15 @@
         {% for x in ts%}
         <tr>
             <td style="text-align: center;">{{x.id}}</td>
+
+            <td>
+                {% if x.img %}
+                    <img src="{{ x.img.url }}" alt="Club Logo" width="50">
+                {% else %}
+                    No Logo
+                {% endif %}
+            </td>
+            
             <td style="color: black; text-align: left;">{{x.team_name}}</td>
             <td>{{x.matches_played}}</td>
             <td style="color: green;">{{x.wins}}</td>

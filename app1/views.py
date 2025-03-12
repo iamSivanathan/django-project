@@ -4,8 +4,11 @@ from .models import Players,TeamStanding,BengaluruTeamPlayers,ChennaiTeamPlayers
 
 from .forms import PlayerForm, TeamStandingForm
 
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout   #login
 from django.contrib import messages
+
+from django.contrib.auth.models import User  #register
+from .forms import RegistrationForm
 
 # Create your views here.
 def index(request):
@@ -75,18 +78,20 @@ def punj(request):
 
 # standing
 def standing(request):  
-    ts = TeamStanding.objects.all().order_by('-points')
+    ts = TeamStanding.objects.all()
     return render(request, 'standing.html', {'ts': ts})
+
 
 # adds new team in standing table
 def standadd(request):
     sform = TeamStandingForm()
-
     if request.method == 'POST':
-        sform = TeamStandingForm(request.POST)
+        sform = TeamStandingForm(request.POST, request.FILES)
         if sform.is_valid():
             sform.save()
-            return redirect('standing')        
+            return redirect('standing')
+        else:
+            sform = TeamStandingForm()        
     return render(request,'standadd.html',{'sform':sform})
 
 # update team in standing table
@@ -118,7 +123,9 @@ def add(request):
         pform = PlayerForm(request.POST)
         if pform.is_valid():
             pform.save()
-            return redirect('player')        
+            return redirect('player')   
+        else:
+            pform = PlayerForm()     
     return render(request,'add.html',{'pform':pform})
 
 def update(request,pk):
@@ -130,6 +137,11 @@ def update(request,pk):
             pform.save()
             return redirect('player')
     return render(request,'update.html',{"pform":pform})    
+
+    # else:
+    #     pform = PlayerForm(instance=upd)
+    # return render(request,'update.html',{'pform':pform})
+
 
 def remove(request,pk):
     upd = Players.objects.get(id=pk)
@@ -159,3 +171,22 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('/login/')
+
+# register
+
+def register(request):
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            user = User.objects.create_user(
+                username=form.cleaned_data['username'],
+                email=form.cleaned_data['email'],
+                password=form.cleaned_data['password']
+            )
+            user.save()
+            messages.success(request, "Registration successful! You can now log in.")
+            return redirect('login')  # Redirect to your login page
+    else:
+        form = RegistrationForm()
+    
+    return render(request, 'register.html', {'form': form})

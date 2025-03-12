@@ -1,6 +1,7 @@
 from django.urls import path # type: ignore
 from . import views
 from .views import login_view, logout_view
+from .views import register
 
 
 urlpatterns = [
@@ -16,6 +17,7 @@ urlpatterns = [
           path('update/<int:pk>',views.update,name='update'),
           path('remove/<int:pk>',views.remove,name='remove'),
 
+# clubs
      path('team/', views.team, name='team'),
           path('beng/',views.beng, name='beng'),
           path('chen/',views.chen,name='chen'),
@@ -32,8 +34,11 @@ urlpatterns = [
           path('punj/',views.punj,name='punj'),
 
 
-
+# login
      path('login/', login_view, name='login'),
      path('logout/', logout_view, name='logout'),
+
+# register
+     path('register/', register, name='register'),
 
 ]

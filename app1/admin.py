@@ -3,15 +3,15 @@ from .models import Players,TeamStanding,BengaluruTeamPlayers,ChennaiTeamPlayers
 
 # Register your models here.
 class PlayersAdmin(admin.ModelAdmin):
-    list_display='name','position','mathch','goal',
+    list_display= 'img','name','club','position','mathch','goal',
 admin.site.register(Players,PlayersAdmin)
 
 class StandingAdmin(admin.ModelAdmin):
-    list_display= 'team_name', 'matches_played', 'wins', 'draws', 'loss'
+    list_display= 'img','team_name', 'matches_played', 'wins', 'draws', 'loss'
 admin.site.register(TeamStanding,StandingAdmin)
 
 class TeamPlayersAdmin(admin.ModelAdmin):
-    list_display='name','position','mathch','goal',
+    list_display='img','name','position','mathch','goal',
 admin.site.register(BengaluruTeamPlayers,TeamPlayersAdmin)
 admin.site.register(ChennaiTeamPlayers,TeamPlayersAdmin)
 admin.site.register(EastBengalTeamPlayers,TeamPlayersAdmin)

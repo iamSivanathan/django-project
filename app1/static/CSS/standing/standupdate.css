@@ -24,7 +24,7 @@
 
 .standupdate-form-container{
     width: 45%;
-    height: 38rem;
+    height: 45rem;
     margin: 30px auto;
     background: linear-gradient( to right,rgb(165, 26, 26),rgb(90, 45, 45));
     border-radius: 10px;
@@ -56,7 +56,7 @@ form input,
 form select,
 form textarea {
     width: 90%;
-    padding: 10px;
+    padding: 8px;
     border: 2px solid #ddd;
     border-radius: 8px;
     font-size: 16px;

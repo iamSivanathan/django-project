@@ -17,26 +17,39 @@
     
     <div class="players-table-container">
 
-    <table>
-        <thead>
+    <table class="club-players-table">
+        <thead class="club-players-table-heading">
             <th>ID</th>
+            <th>Profile</th>
             <th>Name</th>
             <th>Position</th>
             <th>Matches</th>
             <th>Goals</th>
         </thead>
 
-        {% for x in pl%}
-        <tr>
-            <td>{{x.id}}</td>
-           <td>{{x.name}}</td>
-           <td>{{x.position}}</td>
-           <td>{{x.mathch}}</td>
-           <td>{{x.goal}}</td>
-           
         
-        </tr>
-        {% endfor%}    
+        <div class="club-players-table-datas">
+
+            {% for x in pl %}
+            <tr>
+                <td>{{ x.id }}</td>
+    
+                <td>
+                    {% if x.img %}
+                        <img src="{{ x.img.url }}" alt="player_img" width="100">
+                    {% else %}
+                        No Image
+                    {% endif %}
+                </td>
+    
+                <td>{{ x.name }}</td>
+                <td>{{ x.position }}</td>
+                <td>{{ x.mathch }}</td>
+                <td>{{ x.goal }}</td>
+            </tr>
+            {% endfor %}   
+
+        </div>
         
     </table>
 
@@ -46,5 +59,7 @@
 <section id="club-footer">
     <h2>clubfooter</h2>
 </section>
+
+
 </body>
 </html>

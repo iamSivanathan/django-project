@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static%}
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Player update</title>
+    <link rel="stylesheet" href="{% static '/CSS/player/pl_upd.css'%}">
+
 </head>
 <body>
-    <form action="" method="post">
+    <form method="post" enctype="multipart/form-data">
+        <h1>Update Player</h1>
+
         {%csrf_token%}
-        {{pform}}
-        <button>save</button>
+        {{pform.as_p}}
+        <button type="submit">save</button>
     </form>
 </body>
 </html>

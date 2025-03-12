@@ -24,7 +24,9 @@
     <table >
         <thead>
             <th>ID</th>
+            <th>Profile</th>
             <th>Name</th>
+            <th>Club</th>
             <th>Position</th>
             <th>Matches</th>
             <th>Goals</th>
@@ -33,7 +35,25 @@
         {% for x in pl%}
         <tr>
            <td>{{x.id}}</td>
+
+           <td>
+            {% if x.img %}
+                <img src="{{ x.img.url }}" alt="player_img" width="100">
+            {% else %}
+                No Image
+            {% endif %}
+            </td>           
+        
            <td>{{x.name}}</td>
+
+           <td>
+            {% if x.club %}
+                <img src="{{ x.club.url }}" alt="club_img" width="100">
+            {% else %}
+                No Image
+            {% endif %}
+            </td>
+           
            <td>{{x.position}}</td>
            <td>{{x.mathch}}</td>
            <td>{{x.goal}}</td>
